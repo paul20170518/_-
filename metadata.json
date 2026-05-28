@@ -1,0 +1,6 @@
+{
+  "name": "辦公室飲料訂購系統",
+  "description": "專為辦公室設計的精美飲料訂購與統計系統。支援飲品分類推薦、甜度冰塊人性化按鈕、即時總額計算，並可串接 Google Apps Script 進行線上多人協同統計與編輯。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
