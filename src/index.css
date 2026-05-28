@@ -1,1 +1,40 @@
 @import "tailwindcss";
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  background-color: #FAF8F5;
+  background-image: radial-gradient(#F3ECE1 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Custom fine scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #E6DCD0;
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D5C9B8;
+}
+
+/* Animation */
+.fade-in-up {
+  animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
