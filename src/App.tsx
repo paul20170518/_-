@@ -47,7 +47,7 @@ interface Toast {
 export default function App() {
   const [appMode, setAppMode] = useState(MODE_LOCAL);
   const [gasUrl, setGasUrl] = useState(() => {
-    return localStorage.getItem("gas_drink_api_url") || "";
+    return localStorage.getItem("gas_drink_api_url") || "https://script.google.com/macros/s/AKfycby6-4ewTd4b-9BqYnTOPWt4vgqIKo7hR-VFrvYVhJ99FUk_OQ4uCSQDNuNtJNoWTN_8/exec";
   });
   const [showSettings, setShowSettings] = useState(false);
   const [menu, setMenu] = useState<MenuItem[]>(DEFAULT_MENU);
@@ -76,7 +76,7 @@ export default function App() {
 
   // 初始化載入：如果 localStorage 內有 GAS 網址，自動設置為 GAS 模式並嘗試抓取
   useEffect(() => {
-    const storedUrl = localStorage.getItem("gas_drink_api_url");
+    const storedUrl = localStorage.getItem("gas_drink_api_url") || "https://script.google.com/macros/s/AKfycby6-4ewTd4b-9BqYnTOPWt4vgqIKo7hR-VFrvYVhJ99FUk_OQ4uCSQDNuNtJNoWTN_8/exec";
     if (storedUrl && storedUrl.trim().startsWith("http")) {
       setAppMode(MODE_GAS);
       fetchDataFromSource(storedUrl);
